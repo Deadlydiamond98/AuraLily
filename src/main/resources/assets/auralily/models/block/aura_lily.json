@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "botania:block/shapes/cross",
+  "textures": {
+    "cross": "auralily:block/aura_lily"
+  }
+}

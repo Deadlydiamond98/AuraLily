@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "auralily:block/aura_lily"
+  }
+}
