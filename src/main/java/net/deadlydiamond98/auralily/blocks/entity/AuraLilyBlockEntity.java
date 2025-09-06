@@ -4,6 +4,7 @@ import de.ellpeck.naturesaura.api.aura.chunk.IAuraChunk;
 import de.ellpeck.naturesaura.api.aura.type.IAuraType;
 import de.ellpeck.naturesaura.packet.PacketHandler;
 import de.ellpeck.naturesaura.packet.PacketParticleStream;
+import net.deadlydiamond98.auralily.AuraToManaConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
@@ -33,7 +34,7 @@ public class AuraLilyBlockEntity extends GeneratingFlowerBlockEntity {
             if (this.ticksExisted % 10 == 0 && this.getMana() < this.getMaxMana()) {
                 int auraInArea = IAuraChunk.getAuraInArea(this.level, this.worldPosition, 20);
 
-                int absorbableAura = Math.min(auraInArea, 21);
+                int absorbableAura = Math.min(auraInArea, AuraToManaConfig.auraPerMana);
                 if (absorbableAura > 0) {
                     BlockPos spot = IAuraChunk.getHighestSpot(this.level, this.worldPosition, 20, this.worldPosition);
                     IAuraChunk chunk = IAuraChunk.getAuraChunk(this.level, spot);

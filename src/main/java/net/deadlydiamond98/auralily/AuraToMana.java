@@ -10,6 +10,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import vazkii.botania.api.BotaniaRegistries;
@@ -29,6 +30,8 @@ public class AuraToMana {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        context.registerConfig(ModConfig.Type.COMMON, AuraToManaConfig.SPEC);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

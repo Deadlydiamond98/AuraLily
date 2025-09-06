@@ -1,0 +1,26 @@
+{
+  "type": "botania:petal_apothecary",
+  "ingredients": [
+    {
+      "tag": "botania:petals/purple"
+    },
+    {
+      "tag": "botania:petals/purple"
+    },
+    {
+      "tag": "botania:petals/yellow"
+    },
+    {
+      "item": "naturesaura:depth_ingot"
+    },
+    {
+      "item": "botania:rune_earth"
+    }
+  ],
+  "output": {
+    "item": "auralily:aura_lily"
+  },
+  "reagent": {
+    "tag": "botania:seed_apothecary_reagent"
+  }
+}
