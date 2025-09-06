@@ -7,6 +7,7 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 
 @Mod.EventBusSubscriber(modid = AuraToMana.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AuraToManaConfig {
+
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     private static final ForgeConfigSpec.IntValue AURA_COUNT = BUILDER
@@ -14,7 +15,6 @@ public class AuraToManaConfig {
             .defineInRange("auraPerMana", 21, 1, Integer.MAX_VALUE);
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
-
     public static int auraPerMana;
 
     @SubscribeEvent
